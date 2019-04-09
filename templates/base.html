@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/static/myscc.css">
+        {% block head %}
+            <title>{% block title %}{% endblock %}</title> 
+        {% endblock %}
+    </head>
+    
+	<body>
+        {% block body %}
+
+        <!--flash messages-->
+            {% block flash %}
+                {% with messages = get_flashed_messages(with_categories=True) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                        <div class="{{ category }}">
+                            <li>{{ message }}</li>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            {% endblock %}
+            {% block header%} 
+                <header>
+                    <p>Welcome, please provide Registration </p> 
+                    <p>about your New House</p>
+                </header>
+            {% endblock %}
+        {% block section %}
+        {% endblock %}
+        {% block footer %}
+        {% endblock %}
+        {% endblock %}
+	</body>
+</html>

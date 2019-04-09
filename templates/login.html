@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+<!-- title bar -->
+{% block title %}Login page{% endblock %}
+
+<!-- head bar -->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+<!--start of the body content-->
+{% block body %}
+    <!--header information-->
+    {% block header %}
+        <header>  
+            <h1>Please provide your Credentials to access the system</h1>
+        </header>
+    {% endblock %}
+    <!--section information-->
+    {% block section %}
+        <div class = "container">
+            <div id="form_data">
+                <form action="/" method="POST">
+                    <!--message flashing-->
+                    {% block flash %}
+                        {{ super() }}
+                    {% endblock %}
+                    <p>Username</p>
+                    <input type="text" placeholder="Enter your username" name="username">
+                    <p>Password</p>
+                    <input type="password" placeholder="Enter your password" name="password">
+                    <input type="submit" value = "Login" name = "submit"><br>
+                    <ul>
+                        <li><a href = "{{ url_for('Verify')}}">Forgot password</a></li>
+                        <a href="{{ url_for('Register')}}">No account, Signup Now</a>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    {% endblock %}
+
+
+    <!--footer information-->
+    {% block footer %}
+
+    {% endblock %}
+
+{% endblock %}

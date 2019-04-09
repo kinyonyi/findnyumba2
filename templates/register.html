@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+<!-- title bar -->
+{% block title %}Registration page{% endblock %}
+
+<!-- head bar -->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+<!--start of the body content-->
+{% block body %}
+    <!--header information-->
+    {% block header %}
+        <header>  
+            <h1>Please provide your Credentials to access the system</h1>
+        </header>
+    {% endblock %}
+    
+    <!--section information-->
+    {% block section %}
+        <div class = "container">
+            <div id="form_data">
+                <form action="/register" method="POST">
+                    <!--message flashing-->
+                    {% block flash %}
+                        {{ super() }}
+                    {% endblock %}
+                    <!--form information for the login-->
+                    <p>Firstname</p>
+                    <input type="text" placeholder="Enter your username" name="firstname">
+                    <p>Lastname</p>
+                    <input type="text" placeholder="Enter your lastname" name="lastname">
+                    <p>Username</p>
+                    <input type="text" placeholder="Enter a name to use on this platform" name="username">
+                    <p>Date of birth</p>
+                    <input type="date" name="date"><br>
+                    <p>Email</p>
+                    <input type="email" placeholder="Enter your email" name="email">
+                    <p>Password</p>
+                    <input type="password" placeholder="Enter your password" name="password">
+                    <p>verify password</p>
+                    <input type="password" placeholder="Enter your password again" name="password2">
+                    <input type="submit" value = "Register" name = "submit"><br>
+                </form>
+            </div>
+        </div>
+    {% endblock %}
+
+    <!--footer information-->
+    {% block footer %}
+
+    {% endblock %}
+
+{% endblock %}

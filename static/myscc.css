@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    text-align: center;
+    font-size: 3vw;
+    margin: 1vw 0 1vw 0;
+}
+header h1{
+    text-align: center;
+    font-size: 2vw;
+    margin: 1vw 0 1vw 0;
+    color: white;
+}
+.container{
+    width: 80%;
+    padding: 2vw;
+    margin: auto;
+    font-size: 2vw;
+}
+#form_data{
+    background-color: rgb(73, 65, 65);
+    width: 40%;
+    margin: auto;
+    padding: 1vw;
+    padding: 40px;
+    border: 1px solid red;
+}
+#form_data p{
+    color: white;
+    font-size: 1vw;
+    width: 100%;
+    float: left;
+    margin-top: 0.5vw;
+}
+#form_data select{
+    color: white;
+    background: transparent;
+    outline: none;
+    float: left;
+    width: 100%;
+    font-size: 1vw;
+    border: none;
+    border-bottom: 1px solid rgb(241, 239, 239);
+}
+#form_data input[type='text']{
+    background: transparent;
+    outline: none;
+    color: white;
+    border: none;
+    width: 100%;
+    height: 2vw;
+    font-size: 1vw;
+    border-bottom: 1px solid rgb(241, 239, 239);
+}
+#form_data input[type = 'email']{
+    width: 100%;
+    height: 2vw;
+    font-size: 1vw;
+    color: blue;
+    background: transparent;
+    outline: none;
+    color: white;
+    border: none;
+    border-bottom: 1px solid rgb(241, 239, 239);
+}
+#form_data input[type='date']{
+    width: 30%;
+    height: 2vw;
+    font-size: 1vw;
+    background: transparent;
+    outline: none;
+    color: white;
+    border: none;
+    border-bottom: 1px solid rgb(241, 239, 239);
+}
+#form_data input[type='file']{
+    color: white;
+    font-size: 1vw;
+    margin-bottom: 1vw;
+}
+#form_data input[type='password']{
+    height: 2vw;
+    margin-bottom: 1vw;
+    width: 100%;
+    font-size: 1vw;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: white;
+    border-bottom: 1px solid rgb(241, 239, 239);
+}
+#form_data input[type='submit']{
+    font-size: 1vw;
+    width: 40%;
+    border: none;
+    margin: auto;
+    height: 2.5vw;
+    margin-left: 30%;
+    border-radius: 10px;
+    background-color: rgb(46, 131, 24);
+}
+#form_data ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#form_data li, a{
+    text-decoration: none;
+     color: white;
+}
+#form_data li a:last-child{
+    float: right;
+    text-decoration: none;
+}
+#form_data a{
+    padding: 20px;
+    font-size: 1vw;
+}
+.error{
+    color: red;
+    font-size: 1vw;
+    margin-bottom: 20px;
+    list-style: none;
+}
+.info{
+    color: white;
+    font-size: 1vw;
+    margin-bottom: 20px;
+    list-style: none;
+}
+.warning{
+    color: rgb(238, 255, 0);
+    font-size: 1vw;
+    margin-bottom: 20px;
+    list-style: none;
+}

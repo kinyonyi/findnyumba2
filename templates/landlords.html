@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+<!-- title bar -->
+{% block title %}Landlords details page{% endblock %}
+
+<!-- head bar -->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+<!--start of the body content-->
+{% block body %}
+    <!--section information-->
+    {% block section %}
+        <div class = "container">
+            <div id="form_data">
+                <form action="/upload_house" method="POST">
+                    <!--message flashing-->
+                    {% block flash %}
+                        {{ super() }}
+                    {% endblock %}
+                    <p>District</p>
+                    <input type="text" placeholder="Enter district" name="district">
+                    <p>Division</p>
+                    <input type="text" placeholder="Enter division" name="division">
+                    <p>Type of House</p>
+                    <select name="typeOfHouse"> 
+                            <option>Single</option>
+                            <option>Single and self contained</option>
+                            <option>Double</option>
+                            <option>Double and self contained</option>
+                            <option>Complete House</option>
+                        </select>
+                    <p>Number of Rooms</p>
+                    <select name="numberOfRooms"> 
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <p>Monthly rent</p>
+                    <input type="text" placeholder="Enter amount" name="mrent">
+                    <p>Name of LC1 chairman</p>
+                    <input type="text" placeholder="Enter his/her name" name="cman_name">
+                    <p>Phone number of LC1</p>
+                    <input type="text" placeholder="Location of the House" name="cman_phone">
+                    <p>House pictures</p>
+                    <input type="file" accept="image/*" name = "house">
+                    <input type="file" accept="image/*" name = "house">
+                    <p>ID picture</p>
+                    <input type= "file" accept="image/*" name = "id" value="ID"><br>
+                    <input type="submit" value = "Post House">
+                </form>
+            </div>
+        </div>
+    {% endblock %}
+
+    <!--footer information-->
+    {% block footer %}
+    {% endblock %}
+
+{% endblock %}
